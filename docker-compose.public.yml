@@ -1,0 +1,21 @@
+# Optional HTTPS gateway on a server whose public domain resolves to its IP.
+# docker compose -f docker-compose.yml -f docker-compose.public.yml up -d --build
+services:
+  gateway:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      PUBLIC_DOMAIN: ${PUBLIC_DOMAIN:?Set PUBLIC_DOMAIN to your real domain in .env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      dashboard:
+        condition: service_healthy
+volumes:
+  caddy-data:
+  caddy-config:

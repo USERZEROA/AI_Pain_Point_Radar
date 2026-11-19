@@ -1,0 +1,15 @@
+{
+  "run_id": "replay-demo-20261119",
+  "first_source_at": "2026-11-16 18:12:36+00:00",
+  "last_source_at": "2026-11-19 18:09:39+00:00",
+  "processed_records": 2563,
+  "model_version": "online-ewma-v1",
+  "evaluation": "walk-forward, only prior complete source-hour windows",
+  "evaluated_category_hours": 378,
+  "model_mae": 0.030371837539812447,
+  "previous_hour_baseline_mae": 0.031746031746031744,
+  "anomalous_category_hours": 0,
+  "minimum_history_hours": 8,
+  "scope": "Collected keyword stream only; first/last source hours excluded. Sparse internal hours are zero observations in this collection.",
+  "limitation": "Labels are a transparent-rule baseline, not ground-truth demand. No labeled anomaly truth set; anomaly precision/recall is not established."
+}

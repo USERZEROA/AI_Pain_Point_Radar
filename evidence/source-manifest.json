@@ -1,0 +1,110 @@
+{
+  "format_version": 1,
+  "source": "Hacker News via Algolia public search",
+  "api_endpoint": "https://hn.algolia.com/api/v1/search_by_date",
+  "collection_started_at": "2026-11-19T18:12:06.021065Z",
+  "queries": [
+    "LLM",
+    "ChatGPT",
+    "Claude",
+    "Copilot",
+    "AI agent",
+    "artificial intelligence",
+    "Gemini",
+    "Cursor"
+  ],
+  "typo_tolerance": false,
+  "prefix_matching": false,
+  "minimum_requested_records": 600,
+  "scope": "Keyword-visible public HN posts/comments; not a representative sample of all AI users.",
+  "selection": "Complete query pagination in a continuous time window, then explicit AI relevance filtering and ID deduplication. No daily quotas or count truncation.",
+  "completeness_scope": "All returned pages of the configured queries at collection time; search indexing, subsequent edits/deletions, and keyword coverage can omit source content.",
+  "partial_boundary_hours": "The start and end UTC hours may be partial; do not treat them as full exposure windows.",
+  "pagination_complete": true,
+  "record_count": 2563,
+  "sha256": "bf6ceca26860ed2c1f9e005d6b5030e17434641fa80fa9a2abec750d731ee352",
+  "file_name": "replay.jsonl",
+  "source_record_first_at": "2026-11-16T18:12:36.000000Z",
+  "source_record_last_at": "2026-11-19T18:09:39.000000Z",
+  "collection_finished_at": "2026-11-19T18:12:18.996779Z",
+  "window_start": "2026-11-16T18:10:06+00:00",
+  "window_end_exclusive": "2026-11-19T18:10:06+00:00",
+  "query_pages": [
+    {
+      "query": "LLM",
+      "start": 1794852606,
+      "end": 1794982206,
+      "pages": 6,
+      "returned_hits": 584,
+      "reported_hits": 584
+    },
+    {
+      "query": "LLM",
+      "start": 1794982206,
+      "end": 1795111806,
+      "pages": 7,
+      "returned_hits": 603,
+      "reported_hits": 603
+    },
+    {
+      "query": "ChatGPT",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 2,
+      "returned_hits": 151,
+      "reported_hits": 151
+    },
+    {
+      "query": "Claude",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 9,
+      "returned_hits": 805,
+      "reported_hits": 805
+    },
+    {
+      "query": "Copilot",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 1,
+      "returned_hits": 88,
+      "reported_hits": 88
+    },
+    {
+      "query": "AI agent",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 5,
+      "returned_hits": 458,
+      "reported_hits": 458
+    },
+    {
+      "query": "artificial intelligence",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 1,
+      "returned_hits": 29,
+      "reported_hits": 29
+    },
+    {
+      "query": "Gemini",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 3,
+      "returned_hits": 283,
+      "reported_hits": 283
+    },
+    {
+      "query": "Cursor",
+      "start": 1794852606,
+      "end": 1795111806,
+      "pages": 1,
+      "returned_hits": 44,
+      "reported_hits": 44
+    }
+  ],
+  "http_requests": 36,
+  "retrieved_hits_before_deduplication": 3045,
+  "invalid_hits_excluded": 0,
+  "non_ai_or_empty_hits_excluded": 148
+}

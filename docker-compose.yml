@@ -1,0 +1,114 @@
+name: ai-pain-point-radar
+
+x-app: &app
+  build: .
+  image: ai-pain-point-radar:1.0.0
+  init: true
+  restart: unless-stopped
+  environment: &app-env
+    DATABASE_URL: postgresql://${POSTGRES_USER:-radar}:${POSTGRES_PASSWORD:?Run python scripts/start.py first}@postgres:5432/${POSTGRES_DB:-radar}
+    KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    KAFKA_TOPIC: ${KAFKA_TOPIC:-ai_user_feedback}
+    STORAGE_GROUP: ${STORAGE_GROUP:-ai-feedback-storage-v1}
+    ANALYTICS_GROUP: ${ANALYTICS_GROUP:-ai-feedback-analysis-v1}
+    STREAM_MODE: ${STREAM_MODE:-replay}
+    REPLAY_FILE: /app/data/replay.jsonl
+    STATE_DIR: /app/data/state
+    REPLAY_INTERVAL: ${REPLAY_INTERVAL:-1}
+    REPLAY_LOOP: ${REPLAY_LOOP:-true}
+    SEED_LIMIT: ${SEED_LIMIT:-600}
+    LOOKBACK_DAYS: ${LOOKBACK_DAYS:-30}
+    POLL_SECONDS: ${POLL_SECONDS:-30}
+    TZ: UTC
+  depends_on:
+    initialize:
+      condition: service_completed_successfully
+
+services:
+  kafka:
+    image: apache/kafka:4.1.2
+    hostname: kafka
+    restart: unless-stopped
+    environment:
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 3
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_HEAP_OPTS: -Xms256m -Xmx512m
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list >/dev/null 2>&1"]
+      interval: 15s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-radar}
+      POSTGRES_DB: ${POSTGRES_DB:-radar}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run python scripts/start.py first}
+      TZ: UTC
+      PGTZ: UTC
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  initialize:
+    build: .
+    image: ai-pain-point-radar:1.0.0
+    environment: *app-env
+    command: ["python", "scripts/wait_for_services.py", "--initialize"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    restart: "no"
+
+  storage-consumer:
+    <<: *app
+    command: ["python", "-m", "radar.consumer", "--role", "storage"]
+
+  analysis-consumer:
+    <<: *app
+    command: ["python", "-m", "radar.consumer", "--role", "analytics"]
+
+  producer:
+    <<: *app
+    command: ["python", "-m", "radar.producer"]
+    volumes:
+      - source-data:/app/data
+
+  dashboard:
+    <<: *app
+    ports:
+      - "127.0.0.1:8501:8501"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  kafka-data:
+  postgres-data:
+  source-data:

@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-19T18:23:08.156455+00:00",
+  "public": {
+    "initial_count": 628,
+    "later_count": 631,
+    "waited_seconds": 2.22,
+    "websockets": [
+      "wss://mechanism-suggest-cuisine-dubai.trycloudflare.com/_stcore/stream"
+    ],
+    "errors": [],
+    "streamlit_exceptions": 0
+  },
+  "local": {
+    "initial_count": 631,
+    "later_count": 634,
+    "waited_seconds": 2.27,
+    "websockets": [
+      "ws://127.0.0.1:8501/_stcore/stream"
+    ],
+    "errors": [],
+    "streamlit_exceptions": 0
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390
+  }
+}

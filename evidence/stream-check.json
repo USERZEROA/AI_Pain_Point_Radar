@@ -1,0 +1,328 @@
+{
+  "run_id": "replay-dde0f50b4ca64e32",
+  "event_emission_span_seconds": 354.938498,
+  "checks": {
+    "observation_at_least_300_seconds": true,
+    "genuine_event_emission_span_at_least_300_seconds": true,
+    "raw_rows_increased": true,
+    "rows_monotonic": true,
+    "persisted_derived_results_updated": true,
+    "both_consumers_received_records": true,
+    "analysis_caught_up": true
+  },
+  "observations": [
+    {
+      "observed_at": "2026-11-19T18:12:44.265542+00:00",
+      "raw": {
+        "rows": 25,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:12:43.805712+00:00",
+        "last_received": "2026-11-19 18:12:43.818839+00:00"
+      },
+      "analysis": {
+        "rows": 25,
+        "pain_rows": 0,
+        "pain_threads": 0,
+        "last_classified": "2026-11-19 18:12:43.818839+00:00",
+        "latency_p95_seconds": 0.018912599999999998
+      },
+      "windows": {
+        "rows": 6,
+        "last_updated": "2026-11-19 18:12:43.818839+00:00"
+      },
+      "sequence": {
+        "rows": 0,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 0.027
+    },
+    {
+      "observed_at": "2026-11-19T18:13:14.268121+00:00",
+      "raw": {
+        "rows": 54,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:13:13.413433+00:00",
+        "last_received": "2026-11-19 18:13:13.426341+00:00"
+      },
+      "analysis": {
+        "rows": 54,
+        "pain_rows": 0,
+        "pain_threads": 0,
+        "last_classified": "2026-11-19 18:13:13.426341+00:00",
+        "latency_p95_seconds": 0.018787949999999998
+      },
+      "windows": {
+        "rows": 12,
+        "last_updated": "2026-11-19 18:13:13.426341+00:00"
+      },
+      "sequence": {
+        "rows": 0,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 30.029
+    },
+    {
+      "observed_at": "2026-11-19T18:13:44.272156+00:00",
+      "raw": {
+        "rows": 84,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:13:43.927854+00:00",
+        "last_received": "2026-11-19 18:13:43.939792+00:00"
+      },
+      "analysis": {
+        "rows": 84,
+        "pain_rows": 0,
+        "pain_threads": 0,
+        "last_classified": "2026-11-19 18:13:43.942905+00:00",
+        "latency_p95_seconds": 0.0249811
+      },
+      "windows": {
+        "rows": 18,
+        "last_updated": "2026-11-19 18:13:43.942905+00:00"
+      },
+      "sequence": {
+        "rows": 6,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 60.033
+    },
+    {
+      "observed_at": "2026-11-19T18:14:14.275459+00:00",
+      "raw": {
+        "rows": 113,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:14:13.392690+00:00",
+        "last_received": "2026-11-19 18:14:13.411468+00:00"
+      },
+      "analysis": {
+        "rows": 113,
+        "pain_rows": 0,
+        "pain_threads": 0,
+        "last_classified": "2026-11-19 18:14:13.413888+00:00",
+        "latency_p95_seconds": 0.0251062
+      },
+      "windows": {
+        "rows": 24,
+        "last_updated": "2026-11-19 18:14:13.413888+00:00"
+      },
+      "sequence": {
+        "rows": 12,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 90.037
+    },
+    {
+      "observed_at": "2026-11-19T18:14:44.281200+00:00",
+      "raw": {
+        "rows": 143,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:14:43.894098+00:00",
+        "last_received": "2026-11-19 18:14:43.906025+00:00"
+      },
+      "analysis": {
+        "rows": 143,
+        "pain_rows": 0,
+        "pain_threads": 0,
+        "last_classified": "2026-11-19 18:14:43.906025+00:00",
+        "latency_p95_seconds": 0.0250095
+      },
+      "windows": {
+        "rows": 30,
+        "last_updated": "2026-11-19 18:14:43.906025+00:00"
+      },
+      "sequence": {
+        "rows": 18,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 120.042
+    },
+    {
+      "observed_at": "2026-11-19T18:15:14.284774+00:00",
+      "raw": {
+        "rows": 172,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:15:13.361483+00:00",
+        "last_received": "2026-11-19 18:15:13.373218+00:00"
+      },
+      "analysis": {
+        "rows": 172,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:15:13.373251+00:00",
+        "latency_p95_seconds": 0.024865949999999998
+      },
+      "windows": {
+        "rows": 30,
+        "last_updated": "2026-11-19 18:15:13.373251+00:00"
+      },
+      "sequence": {
+        "rows": 18,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 150.046
+    },
+    {
+      "observed_at": "2026-11-19T18:15:44.288841+00:00",
+      "raw": {
+        "rows": 202,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:15:43.846792+00:00",
+        "last_received": "2026-11-19 18:15:43.858801+00:00"
+      },
+      "analysis": {
+        "rows": 202,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:15:43.858803+00:00",
+        "latency_p95_seconds": 0.024742
+      },
+      "windows": {
+        "rows": 36,
+        "last_updated": "2026-11-19 18:15:43.858803+00:00"
+      },
+      "sequence": {
+        "rows": 24,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 180.05
+    },
+    {
+      "observed_at": "2026-11-19T18:16:14.292249+00:00",
+      "raw": {
+        "rows": 231,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:16:13.303537+00:00",
+        "last_received": "2026-11-19 18:16:13.315159+00:00"
+      },
+      "analysis": {
+        "rows": 231,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:16:13.315107+00:00",
+        "latency_p95_seconds": 0.024503999999999998
+      },
+      "windows": {
+        "rows": 42,
+        "last_updated": "2026-11-19 18:16:13.315107+00:00"
+      },
+      "sequence": {
+        "rows": 30,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 210.053
+    },
+    {
+      "observed_at": "2026-11-19T18:16:44.297052+00:00",
+      "raw": {
+        "rows": 261,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:16:43.781557+00:00",
+        "last_received": "2026-11-19 18:16:43.793401+00:00"
+      },
+      "analysis": {
+        "rows": 261,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:16:43.793464+00:00",
+        "latency_p95_seconds": 0.023859
+      },
+      "windows": {
+        "rows": 48,
+        "last_updated": "2026-11-19 18:16:43.793464+00:00"
+      },
+      "sequence": {
+        "rows": 36,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 240.058
+    },
+    {
+      "observed_at": "2026-11-19T18:17:14.299382+00:00",
+      "raw": {
+        "rows": 291,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:17:14.257449+00:00",
+        "last_received": "2026-11-19 18:17:14.269032+00:00"
+      },
+      "analysis": {
+        "rows": 291,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:17:14.269032+00:00",
+        "latency_p95_seconds": 0.0236135
+      },
+      "windows": {
+        "rows": 60,
+        "last_updated": "2026-11-19 18:17:14.269032+00:00"
+      },
+      "sequence": {
+        "rows": 48,
+        "ready_rows": 0,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 270.061
+    },
+    {
+      "observed_at": "2026-11-19T18:17:44.303039+00:00",
+      "raw": {
+        "rows": 320,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:17:43.718223+00:00",
+        "last_received": "2026-11-19 18:17:43.730948+00:00"
+      },
+      "analysis": {
+        "rows": 320,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:17:43.729868+00:00",
+        "latency_p95_seconds": 0.022786450000000007
+      },
+      "windows": {
+        "rows": 66,
+        "last_updated": "2026-11-19 18:17:43.729868+00:00"
+      },
+      "sequence": {
+        "rows": 54,
+        "ready_rows": 6,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 300.064
+    },
+    {
+      "observed_at": "2026-11-19T18:18:14.241656+00:00",
+      "raw": {
+        "rows": 350,
+        "first_emitted": "2026-11-19 18:12:19.239216+00:00",
+        "last_emitted": "2026-11-19 18:18:14.177714+00:00",
+        "last_received": "2026-11-19 18:18:14.192340+00:00"
+      },
+      "analysis": {
+        "rows": 350,
+        "pain_rows": 1,
+        "pain_threads": 1,
+        "last_classified": "2026-11-19 18:18:14.189667+00:00",
+        "latency_p95_seconds": 0.022275400000000004
+      },
+      "windows": {
+        "rows": 78,
+        "last_updated": "2026-11-19 18:18:14.189667+00:00"
+      },
+      "sequence": {
+        "rows": 66,
+        "ready_rows": 18,
+        "anomalies": 0
+      },
+      "elapsed_seconds": 330.003
+    }
+  ],
+  "note": "This observes PostgreSQL populated by Kafka consumers; no rows are inserted by this verifier."
+}
