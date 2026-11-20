@@ -488,7 +488,7 @@ CSS = """
 
 def main() -> None:
     st.set_page_config(page_title="AI Pain Point Radar", page_icon="◈", layout="wide",
-                       initial_sidebar_state="expanded")
+                       initial_sidebar_state="auto")
     st.markdown(CSS, unsafe_allow_html=True)  # Static, application-owned CSS only.
     st.markdown(
         '<section class="radar-hero"><h1 class="radar-title">AI Pain Point Radar</h1>'
