@@ -36,7 +36,9 @@ The Kafka key is `thread_id` so each story and its comments go to the same parti
 
 ## Results
 
-In a 330-second observation, raw and analyzed rows grew from **25 to 350** and hourly aggregates updated as events arrived. A complete replay analyzed **2,563** items and flagged **7** reports in **6** threads. [Stream check](evidence/stream-check.json) | [Source manifest](evidence/source-manifest.json) | [Hosted browser check](evidence/cloud-browser-check.json).
+On Google Cloud, raw and analyzed rows both grew from **823 to 1,148** in 330 seconds. Saved hourly rows increased from **138 to 210**. [Cloud stream check](evidence/cloud-stream-check.json) | [Hosted browser check](evidence/cloud-browser-check.json).
+
+An earlier complete replay analyzed **2,563** items and flagged **7** reports in **6** threads. [Source manifest](evidence/source-manifest.json).
 
 The analytics consumer saves an EWMA forecast for each category and complete source hour. Across 378 scored category-hours, forecast MAE was **0.0304** reports per hour versus **0.0317** for the previous-hour baseline. The replay had zero flagged anomalies. [Model evaluation](evidence/model-evaluation.json).
 
@@ -44,7 +46,7 @@ The analytics consumer saves an EWMA forecast for each category and complete sou
 
 ![Overview with four metrics, hourly counts, a category bar chart, and a product heatmap](evidence/screenshots/overview.png)
 
-Hourly counts, issue categories, and product breakdown from the recorded replay.
+Hourly counts, issue categories, and product breakdown on the deployed dashboard.
 
 <details>
 <summary>Source excerpts, forecasts, and mobile view</summary>
@@ -53,12 +55,12 @@ Hourly counts, issue categories, and product breakdown from the recorded replay.
 
 Source excerpts link each classification to the original discussion.
 
-![Observed and forecast hourly counts for cost and limits](evidence/screenshots/forecast.png)
+![Observed and forecast hourly counts for reliability](evidence/screenshots/forecast.png)
 
 The forecast tab shows observed counts against the saved forecast.
 
 ![Dashboard summary and hourly counts on a 390-pixel-wide screen](evidence/screenshots/mobile.png)
 
-The same replay on a phone-width screen.
+The deployed dashboard at phone width, with the sidebar collapsed by default.
 
 </details>

@@ -1,12 +1,26 @@
 {
-  "checked_at": "2026-11-20T02:12:52.587297+00:00",
+  "checked_at": "2026-11-20T02:33:37.592981+00:00",
   "url": "https://34.71.240.199",
   "health_http_status": 200,
   "anonymous_browser_http_status": 200,
-  "initial_count": 50,
-  "later_count": 53,
-  "waited_seconds": 2.64,
+  "initial_count": 1256,
+  "later_count": 1259,
+  "waited_seconds": 2.81,
+  "summary_metrics": 4,
+  "overview_charts": [
+    "Issues over time",
+    "Reports by category",
+    "Issues by product"
+  ],
+  "source_table": "visible",
+  "source_link_verified": "https://news.ycombinator.com/item?id=50539050",
+  "forecast_chart": "visible",
   "websocket": "connected",
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "initial_sidebar_collapsed": true
+  },
   "browser_errors": [],
   "streamlit_exceptions": 0
 }

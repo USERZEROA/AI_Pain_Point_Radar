@@ -1,0 +1,330 @@
+{
+    "deployment":  "Google Cloud Compute Engine",
+    "dashboard_url":  "https://34.71.240.199",
+    "run_id":  "replay-bd3c779e272b4ec4",
+    "event_emission_span_seconds":  1176.691076,
+    "checks":  {
+                   "observation_at_least_300_seconds":  true,
+                   "genuine_event_emission_span_at_least_300_seconds":  true,
+                   "raw_rows_increased":  true,
+                   "rows_monotonic":  true,
+                   "persisted_derived_results_updated":  true,
+                   "both_consumers_received_records":  true,
+                   "analysis_caught_up":  true
+               },
+    "observations":  [
+                         {
+                             "observed_at":  "2026-11-20T02:26:06.092798+00:00",
+                             "raw":  {
+                                         "rows":  823,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:26:05.424380+00:00",
+                                         "last_received":  "2026-11-20 02:26:05.437963+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  823,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:26:05.438714+00:00",
+                                              "latency_p95_seconds":  0.021608099999999998
+                                          },
+                             "windows":  {
+                                             "rows":  138,
+                                             "last_updated":  "2026-11-20 02:26:05.438714+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  126,
+                                              "ready_rows":  78,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  0.049
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:26:36.098851+00:00",
+                             "raw":  {
+                                         "rows":  853,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:26:35.889415+00:00",
+                                         "last_received":  "2026-11-20 02:26:35.903686+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  853,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:26:35.904850+00:00",
+                                              "latency_p95_seconds":  0.02148
+                                          },
+                             "windows":  {
+                                             "rows":  150,
+                                             "last_updated":  "2026-11-20 02:26:35.904850+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  138,
+                                              "ready_rows":  90,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  30.055
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:27:06.108064+00:00",
+                             "raw":  {
+                                         "rows":  882,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:27:05.494587+00:00",
+                                         "last_received":  "2026-11-20 02:27:05.509492+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  882,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:27:05.508645+00:00",
+                                              "latency_p95_seconds":  0.02184425
+                                          },
+                             "windows":  {
+                                             "rows":  156,
+                                             "last_updated":  "2026-11-20 02:27:05.508645+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  144,
+                                              "ready_rows":  96,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  60.065
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:27:36.116702+00:00",
+                             "raw":  {
+                                         "rows":  912,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:27:35.961819+00:00",
+                                         "last_received":  "2026-11-20 02:27:35.978519+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  912,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:27:35.977040+00:00",
+                                              "latency_p95_seconds":  0.02183675
+                                          },
+                             "windows":  {
+                                             "rows":  162,
+                                             "last_updated":  "2026-11-20 02:27:35.977040+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  150,
+                                              "ready_rows":  102,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  90.073
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:28:06.124239+00:00",
+                             "raw":  {
+                                         "rows":  941,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:28:05.405446+00:00",
+                                         "last_received":  "2026-11-20 02:28:05.419961+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  941,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:28:05.420214+00:00",
+                                              "latency_p95_seconds":  0.021624
+                                          },
+                             "windows":  {
+                                             "rows":  168,
+                                             "last_updated":  "2026-11-20 02:28:05.420214+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  156,
+                                              "ready_rows":  108,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  120.081
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:28:36.131858+00:00",
+                             "raw":  {
+                                         "rows":  971,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:28:35.870710+00:00",
+                                         "last_received":  "2026-11-20 02:28:35.884036+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  971,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:28:35.884178+00:00",
+                                              "latency_p95_seconds":  0.0215645
+                                          },
+                             "windows":  {
+                                             "rows":  174,
+                                             "last_updated":  "2026-11-20 02:28:35.884178+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  162,
+                                              "ready_rows":  114,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  150.089
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:29:06.139222+00:00",
+                             "raw":  {
+                                         "rows":  1000,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:29:05.312286+00:00",
+                                         "last_received":  "2026-11-20 02:29:05.327283+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  1000,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:29:05.326258+00:00",
+                                              "latency_p95_seconds":  0.0214625
+                                          },
+                             "windows":  {
+                                             "rows":  186,
+                                             "last_updated":  "2026-11-20 02:29:05.326258+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  174,
+                                              "ready_rows":  126,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  180.096
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:29:36.150254+00:00",
+                             "raw":  {
+                                         "rows":  1030,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:29:35.775576+00:00",
+                                         "last_received":  "2026-11-20 02:29:35.794295+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  1030,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:29:35.793510+00:00",
+                                              "latency_p95_seconds":  0.02141905
+                                          },
+                             "windows":  {
+                                             "rows":  186,
+                                             "last_updated":  "2026-11-20 02:29:35.793510+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  174,
+                                              "ready_rows":  126,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  210.107
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:30:06.174665+00:00",
+                             "raw":  {
+                                         "rows":  1059,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:30:05.341634+00:00",
+                                         "last_received":  "2026-11-20 02:30:05.356885+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  1059,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:30:05.356402+00:00",
+                                              "latency_p95_seconds":  0.0213788
+                                          },
+                             "windows":  {
+                                             "rows":  192,
+                                             "last_updated":  "2026-11-20 02:30:05.356402+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  180,
+                                              "ready_rows":  132,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  240.131
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:30:36.181520+00:00",
+                             "raw":  {
+                                         "rows":  1089,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:30:35.809676+00:00",
+                                         "last_received":  "2026-11-20 02:30:35.824161+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  1089,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:30:35.824799+00:00",
+                                              "latency_p95_seconds":  0.021162999999999994
+                                          },
+                             "windows":  {
+                                             "rows":  198,
+                                             "last_updated":  "2026-11-20 02:30:35.824799+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  186,
+                                              "ready_rows":  138,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  270.138
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:31:06.189290+00:00",
+                             "raw":  {
+                                         "rows":  1118,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:31:05.256937+00:00",
+                                         "last_received":  "2026-11-20 02:31:05.271414+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  1118,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:31:05.270803+00:00",
+                                              "latency_p95_seconds":  0.020982949999999976
+                                          },
+                             "windows":  {
+                                             "rows":  204,
+                                             "last_updated":  "2026-11-20 02:31:05.270803+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  192,
+                                              "ready_rows":  144,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  300.146
+                         },
+                         {
+                             "observed_at":  "2026-11-20T02:31:36.049903+00:00",
+                             "raw":  {
+                                         "rows":  1148,
+                                         "first_emitted":  "2026-11-20 02:11:59.052169+00:00",
+                                         "last_emitted":  "2026-11-20 02:31:35.743245+00:00",
+                                         "last_received":  "2026-11-20 02:31:35.757445+00:00"
+                                     },
+                             "analysis":  {
+                                              "rows":  1148,
+                                              "pain_rows":  5,
+                                              "pain_threads":  4,
+                                              "last_classified":  "2026-11-20 02:31:35.757208+00:00",
+                                              "latency_p95_seconds":  0.020885249999999973
+                                          },
+                             "windows":  {
+                                             "rows":  210,
+                                             "last_updated":  "2026-11-20 02:31:35.757208+00:00"
+                                         },
+                             "sequence":  {
+                                              "rows":  198,
+                                              "ready_rows":  150,
+                                              "anomalies":  0
+                                          },
+                             "elapsed_seconds":  330.007
+                         }
+                     ],
+    "note":  "This observes PostgreSQL populated by Kafka consumers; no rows are inserted by this verifier."
+}
