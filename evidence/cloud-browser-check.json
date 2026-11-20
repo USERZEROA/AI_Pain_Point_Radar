@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-20T02:12:52.587297+00:00",
+  "url": "https://34.71.240.199",
+  "health_http_status": 200,
+  "anonymous_browser_http_status": 200,
+  "initial_count": 50,
+  "later_count": 53,
+  "waited_seconds": 2.64,
+  "websocket": "connected",
+  "browser_errors": [],
+  "streamlit_exceptions": 0
+}

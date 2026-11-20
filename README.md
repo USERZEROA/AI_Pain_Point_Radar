@@ -2,7 +2,7 @@
 
 # AI Pain Point Radar
 
-[Open the Streamlit dashboard](https://mechanism-suggest-cuisine-dubai.trycloudflare.com) (temporary public demo).
+[Open the live Streamlit dashboard](https://34.71.240.199)
 
 Which problems do people report when they use AI tools? The radar groups first-person complaints by issue and links them back to the public discussions. The counts describe a keyword sample of posts and comments. [Hacker News search API](https://hn.algolia.com/api).
 
@@ -36,7 +36,7 @@ The Kafka key is `thread_id` so each story and its comments go to the same parti
 
 ## Results
 
-In a 330-second observation, raw and analyzed rows grew from **25 to 350** and hourly aggregates updated as events arrived. A complete replay analyzed **2,563** items and flagged **7** reports in **6** threads. [Stream check](evidence/stream-check.json) | [Source manifest](evidence/source-manifest.json) | [Browser check](evidence/browser-check.json).
+In a 330-second observation, raw and analyzed rows grew from **25 to 350** and hourly aggregates updated as events arrived. A complete replay analyzed **2,563** items and flagged **7** reports in **6** threads. [Stream check](evidence/stream-check.json) | [Source manifest](evidence/source-manifest.json) | [Hosted browser check](evidence/cloud-browser-check.json).
 
 The analytics consumer saves an EWMA forecast for each category and complete source hour. Across 378 scored category-hours, forecast MAE was **0.0304** reports per hour versus **0.0317** for the previous-hour baseline. The replay had zero flagged anomalies. [Model evaluation](evidence/model-evaluation.json).
 
@@ -44,7 +44,7 @@ The analytics consumer saves an EWMA forecast for each category and complete sou
 
 ![Overview with four metrics, hourly counts, a category bar chart, and a product heatmap](evidence/screenshots/overview.png)
 
-Hourly counts, issue categories, and product breakdown. Select `replay-demo-20261119` on the public demo to see this run.
+Hourly counts, issue categories, and product breakdown from the recorded replay.
 
 <details>
 <summary>Source excerpts, forecasts, and mobile view</summary>

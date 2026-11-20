@@ -49,7 +49,9 @@ def main() -> None:
     command = ["docker", "compose", "-f", "docker-compose.yml"]
     if args.public_domain:
         command += ["-f", "docker-compose.public.yml"]
-    subprocess.run(command + ["up", "--build", "-d"], cwd=ROOT, env=env, check=True)
+    # The producer, consumers and dashboard share the dashboard service's image.
+    subprocess.run(command + ["build", "dashboard"], cwd=ROOT, env=env, check=True)
+    subprocess.run(command + ["up", "--no-build", "-d"], cwd=ROOT, env=env, check=True)
     print("Dashboard: " + (f"https://{args.public_domain}" if args.public_domain else "http://localhost:8501"))
     print("Initial genuine-data collection may take a few minutes. See: docker compose logs -f producer")
 

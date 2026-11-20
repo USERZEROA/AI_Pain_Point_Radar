@@ -1,5 +1,5 @@
 # Optional HTTPS gateway on a server whose public domain resolves to its IP.
-# docker compose -f docker-compose.yml -f docker-compose.public.yml up -d --build
+# python scripts/start.py --public-domain YOUR_HOSTNAME
 services:
   gateway:
     image: caddy:2-alpine

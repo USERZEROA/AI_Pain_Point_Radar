@@ -19,3 +19,13 @@ docker compose logs --tail 30 producer
 ```
 
 After updating the checkout, run the same launch command to rebuild. To stop the deployment while retaining the data volumes, use `docker compose -f docker-compose.yml -f docker-compose.public.yml down`.
+
+## Google Cloud demo
+
+The demo runs on a Compute Engine VM with a reserved public IPv4 address. The VM startup script mounts a Caddy configuration that requests and renews a Let's Encrypt certificate for the IP address. To check the running services from the VM, include its Compose override.
+
+```bash
+cd /opt/ai-pain-point-radar
+sudo docker compose -f docker-compose.yml -f docker-compose.public.yml \
+  -f /etc/ai-pain-point-radar/compose.yml ps
+```
